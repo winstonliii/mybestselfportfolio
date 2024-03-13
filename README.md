@@ -5,3 +5,14 @@ The project is an introspective journey aimed at personal and leadership growth.
 
 ## How to run this website
 1. You can access this website through this link! --> 
+
+
+
+## Running Locally
+
+To run the app locally, follow these steps:
+
+1. Clone this repository.
+2. Open the terminal at the root of the repository.
+3. Install dependencies with `pnpm install`.
+4. Run the app with `pnpm dev`.
