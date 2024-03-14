@@ -1,28 +1,21 @@
-import React from 'react';
-
-const baseUrl = '/mybestselfportfolio'; 
-
-const navigation = [
-  { name: 'About Me', href: `${baseUrl}/about-me` },
-  { name: 'Interviews', href: `${baseUrl}/interviews` },
-  { name: 'Assessments', href: `${baseUrl}/assessments` },
-  { name: 'Reflections', href: `${baseUrl}/reflections` },
-  { name: 'Growth', href: `${baseUrl}/growth` },
-];
+import React from "react";
+import NavBar from "@/components/NavBar";
 
 const AboutMe = () => {
   return (
     <div className="max-w-4xl px-4 py-16 mx-auto sm:px-6 lg:px-8">
-      <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+      <NavBar />
+
+      <h2 className="mt-8 text-3xl font-extrabold text-gray-900 sm:text-4xl sm:mt-12">
         About Me
       </h2>
-      <div className="mt-4 text-gray-600">
+      <div className="text-xl text-gray-600">
         <p>
-          This is the About Me page. Here, you can introduce yourself, your background, 
-          and anything else you want visitors to know about you. You might discuss your 
-          journey, experiences, or the goals of your portfolio.
+          This is the About Me page. Here, you can introduce yourself, your
+          background, and anything else you want visitors to know about you. You
+          might discuss your journey, experiences, or the goals of your
+          portfolio.
         </p>
-        {/* Include more paragraphs, images, or other elements as needed. */}
       </div>
     </div>
   );

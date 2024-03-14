@@ -1,12 +1,11 @@
-import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Landing from "./App/Landing";
-import AboutMe from './App/AboutMe'; 
-// import Interviews from './App/Interviews'; 
+import AboutMe from "./App/AboutMe";
+// import Interviews from './App/Interviews';
 // import Assessments from './App/Assessments';
-// import Reflections from './App/Reflections'; 
+// import Reflections from './App/Reflections';
 // import Growth from './App/Growth';
-
 
 function App() {
   return (
