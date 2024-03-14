@@ -94,6 +94,9 @@ dependencies:
     version: 3.6.0(@mdx-js/mdx@1.6.22)(vite@5.1.6)
 
 devDependencies:
+  '@types/mdx':
+    specifier: ^2.0.11
+    version: 2.0.11
   '@typescript-eslint/eslint-plugin':
     specifier: ^7.1.1
     version: 7.2.0(@typescript-eslint/parser@7.2.0)(eslint@8.57.0)(typescript@5.4.2)
@@ -1402,7 +1405,6 @@ packages:
 
   /@types/mdx@2.0.11:
     resolution: {integrity: sha512-HM5bwOaIQJIQbAYfax35HCKxx7a3KrK3nBtIqJgSOitivTD1y3oW9P3rxY9RkXYPUk7y/AjAohfHKmFpGE79zw==}
-    dev: false
 
   /@types/ms@0.7.34:
     resolution: {integrity: sha512-nG96G3Wp6acyAgJqGasjODb+acrI7KltPiRxzHPXnP3NgI28bpQDRv53olbqGXbfcgF5aiiHmO3xpwEpS5Ld9g==}
