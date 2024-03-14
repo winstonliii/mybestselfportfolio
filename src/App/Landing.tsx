@@ -3,14 +3,16 @@ import { Dialog } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import { Button } from "../components/ui/button";
 
-const navigation = [
-  { name: 'About Me', href: '#' },
-  { name: 'Interviews', href: '#' },
-  { name: 'Self-Reflection', href: '#' },
-  { name: 'Growth', href: '#' },
-]
+const baseUrl = '/mybestselfportfolio'; 
 
-export default function Example() {
+const navigation = [
+  { name: 'About Me', href: `${baseUrl}/about-me` },
+  { name: 'Interviews', href: `${baseUrl}/interviews` },
+  { name: 'Assessments', href: `${baseUrl}/assessments` },
+  { name: 'Reflections', href: `${baseUrl}/reflections` },
+  { name: 'Growth', href: `${baseUrl}/growth` },
+];
+export default function Landing() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   // const [count, setCount] = useState(0)
   const [text, setText] = useState("Nice");
