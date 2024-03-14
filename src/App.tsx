@@ -5,7 +5,7 @@ function App() {
   log.debug("Hello, world!");
   return (
     <div className="flex flex-col items-center justify-center min-h-screen">
-      <Button>Hello, world!</Button>
+      <Button>Welcome to Winston's Best Self Portfolio!</Button>
     </div>
   );
 }
