@@ -1,9 +1,9 @@
-import { Button } from "@/components/ui/button";
+import HeroSection from "./App/HeroSection";
 
 function App() {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen">
-      <Button>Welcome to Winston's Best Self Portfolio!</Button>
+    <div>
+      <HeroSection/>
     </div>
   );
 }
