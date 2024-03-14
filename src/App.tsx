@@ -1,24 +1,27 @@
-import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Landing from "./App/Landing";
-import AboutMe from "./App/AboutMe";
-// import Interviews from './App/Interviews';
-// import Assessments from './App/Assessments';
-// import Reflections from './App/Reflections';
-// import Growth from './App/Growth';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import NavBar from './components/NavBar';
+import AboutMe from './App/AboutMe';
+import Assessments from './App/Assessments';
+import Growth from './App/Growth';
 
-function App() {
+import Interviews from './App/Interviews'; 
+
+import Reflections from './App/Reflections';
+
+
+const App = () => {
   return (
-    <BrowserRouter basename="/mybestselfportfolio">
-      <Routes>
-        <Route path="/" element={<Landing />} />
-        <Route path="/about-me" element={<AboutMe />} />
-        {/* <Route path="/interviews" element={<Interviews />} />
-        <Route path="/self-reflection" element={<Reflections />} />
-        <Route path="/growth" element={<Growth />} /> */}
-      </Routes>
-    </BrowserRouter>
+    <Router>
+      <NavBar />
+      <Switch>
+        <Route path="/mybestselfportfolio/about-me" Component={AboutMe} />
+        <Route path="/mybestselfportfolio/interviews" Component={Interviews} />
+        <Route path="/mybestselfportfolio/assessments" Component={Assessments} />
+        <Route path="/mybestselfportfolio/reflections" Component={Reflections} />
+        <Route path="/mybestselfportfolio/growth" Component={Growth} />
+      </Switch>
+    </Router>
   );
-}
+};
 
 export default App;

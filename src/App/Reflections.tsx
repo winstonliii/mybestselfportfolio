@@ -1,6 +1,6 @@
 import NavBar from "@/components/NavBar";
 
-const Home = () => {
+const Reflections = () => {
   return (
     <div className="">
       <NavBar />
@@ -10,4 +10,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Reflections;
