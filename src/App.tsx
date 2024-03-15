@@ -8,6 +8,7 @@ import Interviews from "./App/Interviews";
 import Reflections from "./App/Reflections";
 import Landing from "./App/Landing";
 import "./index.css";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -26,20 +27,26 @@ function App() {
                 </>
               }
             />
-            <Route path="/mybestselfportfolio/about-me" element={<AboutMe />} />
+            <Route path="/mybestselfportfolio/about-me" element={<> <AboutMe /> <Footer/> </> } />
             <Route
               path="/mybestselfportfolio/interviews"
-              element={<Interviews />}
+              element={<> <Interviews /> <Footer/> </> }
             />
             <Route
               path="/mybestselfportfolio/assessments"
-              element={<Assessments />}
+              element={<><Assessments /> <Footer/> </>}
             />
             <Route
               path="/mybestselfportfolio/reflections"
-              element={<Reflections />}
+              element={<><Reflections /> <Footer/> </>}
             />
-            <Route path="/mybestselfportfolio/growth" element={<Growth />} />
+            <Route path="/mybestselfportfolio/growth" element={
+              <>
+                <Growth /> 
+                <Footer/> 
+              </>
+            }
+            />
             <Route
               path="/mybestselfportfolio"
               element={
