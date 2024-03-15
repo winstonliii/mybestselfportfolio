@@ -10,7 +10,6 @@ export default function Landing() {
       <NavBar />
       <div />
       <div className="bg-white"></div>
-      
 
       <div className="relative px-6 isolate pt-14 lg:px-8">
         <div
@@ -27,10 +26,10 @@ export default function Landing() {
         </div>
         <div className="max-w-2xl py-32 mx-auto sm:py-48 lg:py-56">
           <div className="text-center">
-            <h1 className="mb-5 font-bold tracking-tight text-gray-900 text-7xl">
+            <h1 className="mb-12 font-bold tracking-normal text-gray-900 text-9xl">
               welcome!
             </h1>
-            <h1 className="mb-10 text-5xl font-bold tracking-tight text-gray-900">
+            <h1 className="mb-12 text-5xl font-bold tracking-normal text-gray-900 leading-12">
               dicover my portfolio, a journey of reflection and growth
             </h1>
             <p className="mt-6 text-lg leading-8 text-gray-600">
@@ -43,7 +42,7 @@ export default function Landing() {
             </p>
             <div className="flex items-center justify-center mt-10 gap-x-6">
               <Button
-                className="font-semibold text-white bg-indigo-800 rounded hover:bg-blue-950"
+                className="font-semibold text-white bg-indigo-700 rounded hover:bg-blue-850"
                 onClick={() => setText(text + "!")}
               >
                 {text}

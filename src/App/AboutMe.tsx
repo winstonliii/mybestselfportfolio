@@ -5,9 +5,9 @@ const AboutMe = () => {
     <div className="max-w-4xl px-4 py-16 mx-auto sm:px-6 lg:px-8">
       <NavBar />
 
-      <h2 className="mt-8 text-3xl font-extrabold text-gray-900 sm:text-4xl sm:mt-12">
+      <div className="py-16 text-3xl font-extrabold text-gray-900 sm:text-4xl sm:mt-12">
         About Me
-      </h2>
+      </div>
       <div className="text-xl text-gray-600">
         <p>
           This is the About Me page. Here, you can introduce yourself, your

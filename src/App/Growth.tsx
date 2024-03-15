@@ -4,8 +4,6 @@ const Growth = () => {
   return (
     <div className="">
       <NavBar />
-
-    
     </div>
   );
 };

@@ -4,8 +4,6 @@ const Interviews = () => {
   return (
     <div className="">
       <NavBar />
-
-    
     </div>
   );
 };
