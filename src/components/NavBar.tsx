@@ -25,7 +25,7 @@ const NavBar = () => {
         <div className="flex ml-5 lg:flex-1">
           <a href="/" className="p-2">
             <img
-              className="w-auto h-48"
+              className="w-auto max-h-48 "
               src="https://static.thenounproject.com/png/7563-200.png"
               alt=""
             />
