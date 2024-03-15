@@ -7,8 +7,8 @@ import Growth from "./App/Growth";
 import Interviews from "./App/Interviews";
 import Reflections from "./App/Reflections";
 import Landing from "./App/Landing";
-import "./index.css";
 import Footer from "./components/Footer";
+import "./index.css";
 
 function App() {
   return (
@@ -18,44 +18,13 @@ function App() {
           <NavBar />
 
           <Routes>
-            <Route
-              path="/mybestselfportfolio/home"
-              element={
-                <>
-                  <Landing />
-                  <Home />
-                </>
-              }
-            />
-            <Route path="/mybestselfportfolio/about-me" element={<> <AboutMe /> <Footer/> </> } />
-            <Route
-              path="/mybestselfportfolio/interviews"
-              element={<> <Interviews /> <Footer/> </> }
-            />
-            <Route
-              path="/mybestselfportfolio/assessments"
-              element={<><Assessments /> <Footer/> </>}
-            />
-            <Route
-              path="/mybestselfportfolio/reflections"
-              element={<><Reflections /> <Footer/> </>}
-            />
-            <Route path="/mybestselfportfolio/growth" element={
-              <>
-                <Growth /> 
-                <Footer/> 
-              </>
-            }
-            />
-            <Route
-              path="/mybestselfportfolio"
-              element={
-                <>
-                  <Landing />
-                  <Home />
-                </>
-              }
-            />
+            <Route path="/home" element={<> <Landing /> <Home /> </>} />
+            <Route path="/about-me" element={<> <AboutMe /> <Footer/> </> } />
+            <Route path="/interviews" element={<> <Interviews /> <Footer/> </> } />
+            <Route path="/assessments" element={<><Assessments /> <Footer/> </>} />
+            <Route path="/reflections" element={<><Reflections /> <Footer/> </>} />
+            <Route path="/growth" element={<><Growth /> <Footer/> </>} />
+            <Route path="/" element={<><Landing /> <Home /> </>} />
           </Routes>
         </div>
       </Router>
