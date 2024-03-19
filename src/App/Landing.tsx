@@ -48,7 +48,7 @@ export default function Landing() {
                 {text}
               </Button>
               <a
-                href="#"
+                href="/mybestselfportfolio/#about-me"
                 className="text-sm font-semibold leading-6 text-gray-900"
               >
                 Begin <span aria-hidden="true">→</span>
