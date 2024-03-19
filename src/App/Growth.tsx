@@ -5,12 +5,12 @@ const Growth = () => {
     <div className="">
       <NavBar />
       <div className="mt-60 relative isolate overflow-hidden py-24 sm:py-32 sm:mt-40 xl:mx-auto xl:max-w-8xl xl:px-">
-            <img
-              src={"cloud1.jpg"}
-              alt=""
-              className="aspect-[7/2] w-full object-cover xl:rounded-3xl"
-            />
-          </div>
+        <img
+          src={"cloud1.jpg"}
+          alt=""
+          className="aspect-[7/2] w-full object-cover xl:rounded-3xl"
+        />
+      </div>
       <div className="bg-white px-6 py-32 lg:px-8">
         <div className="pt-28 mx-auto max-w-3xl text-base leading-7 text-gray-700">
           <p className="text-xl font-semibold leading-7 text-indigo-600">

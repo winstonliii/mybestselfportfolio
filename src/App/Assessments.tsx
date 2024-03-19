@@ -23,16 +23,19 @@ const Assessments = () => {
             <div className="relative lg:col-start-2 lg:row-start-1">
               <div className="relative mx-auto max-w-prose text-base lg:max-w-none">
                 <figure>
-                  <h3 className="mb-4 mt-24 text-3xl font-semibold leading-8 tracking-tight text-gray-900 sm:text-3xl">
+                  <h3 className="mb-4 mt-24 text-5xl font-semibold leading-8 tracking-tight text-gray-900 sm:text-3xl">
                     Myers-Briggs Results
                   </h3>
-                  <div className="aspect-h-7 aspect-w-12 lg:aspect-none">
+                  <div className="aspect-[9/2]">
                     <img
                       className="rounded-lg object-cover object-center shadow-lg"
-                      src="https://images.unsplash.com/photo-1546913199-55e06682967e?ixlib=rb-1.2.1&auto=format&fit=crop&crop=focalpoint&fp-x=.735&fp-y=.55&w=1184&h=1376&q=80"
+                      src={"s235701.png"}
                       alt=""
-                      width={1184}
-                      height={1376}
+                    />
+                    <img
+                      className="rounded-lg object-cover object-center shadow-lg"
+                      src={"s235701.png"}
+                      alt=""
                     />
                   </div>
                   <div className="leading-loose prose prose-indigo mx-auto mt-5 text-gray-500 lg:max-w-none">
@@ -257,79 +260,44 @@ const Assessments = () => {
                   <div className="aspect-h-7 aspect-w-12 lg:aspect-none">
                     <img
                       className="rounded-lg object-cover object-center shadow-lg"
-                      src="https://images.unsplash.com/photo-1546913199-55e06682967e?ixlib=rb-1.2.1&auto=format&fit=crop&crop=focalpoint&fp-x=.735&fp-y=.55&w=1184&h=1376&q=80"
+                      src={"conflict1.jpg"}
                       alt=""
-                      width={1184}
-                      height={1376}
+                      width={800}
+                      height={700}
                     />
-                  </div>
-                  <div className="leading-loose prose prose-indigo mx-auto mt-5 text-gray-500 lg:max-w-none">
-                    <p className="mt-12 font-bold text-xl">
-                      A Time When Demonstrated Accommodating and Collaborating
-                      Conflict Management (Owl and Teddy Bear)
-                    </p>
-                    <p>
-                      While working on a presentation for my Object Oriented
-                      Software Engineering course, I was able to apply my
-                      Accommodating and Collaborative conflict management skills
-                      effectively. The project required collaboration with a
-                      diverse team, each member having unique ideas and
-                      perspectives. Early on, we faced disagreements regarding
-                      the project's direction and the implementation of certain
-                      features.
-                    </p>
-                    <p>
-                      In this situation, my Accommodating style came into play
-                      as I wanted to listen to my team’s concerns and
-                      suggestions before I shared my take on the situation.
-                      During a heated argument between my group and TA, I took
-                      steps to acknowledge the validity of each team member's
-                      input, which helped to de-escalate the situation and help
-                      our team return to a positive atmosphere that ensured that
-                      everyone felt valued and heard.
-                    </p>
-                    <p>
-                      However, I knew that merely accommodating wouldn't be
-                      enough to complete our project successfully. This is where
-                      my Collaborating style began to come in. I was able to
-                      facilitated a series of discussions aimed at identifying
-                      our common goals and the essential features for our
-                      project. By encouraging open dialogue and leveraging the
-                      strengths of each team member, we were able to develop a
-                      unified vision for our project. In the end, we were able
-                      to successfully reach a middle ground in our
-                      implementation strategy and created a well rounded
-                      presentation that helped us score a calm 15/15 for our
-                      Product Pitch Presentation.
-                    </p>
-                    <p>
-                      Reflecting on this experience, I learned the importance of
-                      adapting my conflict management style to the situation at
-                      hand. While my natural tendency is to accommodate and
-                      collaborate, I saw firsthand the value of compromising and
-                      maintaining flexibility. I've learned that while
-                      maintaining harmony is important, it's equally crucial to
-                      address and resolve conflicts constructively to achieve
-                      shared goals.
-                    </p>
+                    <img
+                      className="rounded-lg object-cover object-center shadow-lg"
+                      src={"conflict2.jpg"}
+                      alt=""
+                      width={800}
+                      height={700}
+                    />
+                    <img
+                      className="rounded-lg object-cover object-center shadow-lg"
+                      src={"conflict3.jpg"}
+                      alt=""
+                      width={800}
+                      height={700}
+                    />
                   </div>
                 </figure>
               </div>
             </div>
 
             <div className="mt-8 lg:mt-0">
-              <div className="mx-auto max-w-prose text-base lg:max-w-none">
-                <h3 className="mt-8 text-3xl font-bold leading-8 tracking-tight text-gray-900 sm:text-3xl">
-                  Conflict Management
-                </h3>
-              </div>
-              <div className="leading-loose prose prose-indigo mx-auto mt-8 text-gray-500 lg:col-start-1 lg:row-start-1 lg:max-w-none">
+              <div className="leading-loose prose prose-indigo mx-auto text-gray-700 lg:col-start-1 lg:row-start-1 lg:max-w-none">
                 <p>
-                  <p className="font-bold">Conflict Management Style:</p>
-                  <p className="mb-8">Accommodating and Collaborating</p>
+                  <p className="font-bold text-3xl">
+                    Conflict Management Style:
+                  </p>
+                  <p className="mb-8 text-3xl">
+                    -Accommodating and Collaborating
+                  </p>
                 </p>
-                <p>
-                  <p className="font-bold">Overview:</p>
+
+                <p className="mt-24 font-bold text-3xl">Overview:</p>
+
+                <div className="text-xl leading-loose text-gray-500">
                   <p className="">
                     1. Owls highly value both their goals and their
                     relationships. They view conflict as a problem to be solved
@@ -350,74 +318,121 @@ const Assessments = () => {
                     relationships. Teddy Bears try to smooth over conflict to
                     prevent damage to the relationship.
                   </p>
-                </p>
 
-                <p className="leading-loose">
-                  In the Accommodating role, I indeed find myself prioritizing
-                  the needs of others tremendously and a desire to maintain
-                  peace and goodwill. This approach has helped situations where
-                  preserving a relationship is more critical than winning an
-                  argument. However, I am also aware of the potential downsides,
-                  such as neglecting my own needs or not addressing critical
-                  issues head-on.
-                </p>
+                  <p className="leading-loose">
+                    In the Accommodating role, I indeed find myself prioritizing
+                    the needs of others tremendously and a desire to maintain
+                    peace and goodwill. This approach has helped situations
+                    where preserving a relationship is more critical than
+                    winning an argument. However, I am also aware of the
+                    potential downsides, such as neglecting my own needs or not
+                    addressing critical issues head-on.
+                  </p>
 
-                <p>
-                  Similarly, the Collaborating style resonates with my belief in
-                  finding win-win solutions. As an "Owl," I strive to identify
-                  mutual goals and work towards resolutions that satisfy
-                  everyone involved. This approach has enabled me to resolve
-                  complex problems while strengthening relationships, building
-                  trust, and encouraging open communication.
-                </p>
-                <p>
-                  Despite my comfort with accommodation and collaboration, I
-                  recognize the importance of balance and flexibility in
-                  conflict management. Therefore, I am actively working on
-                  enhancing my Compromising skills. This style, characterized by
-                  the "Fox," represents a middle ground between meeting my own
-                  goals and attending to the relationships involved.
-                </p>
-                <p>
-                  Improving in this area means embracing active listening and
-                  clear communication, allowing me to understand opposing
-                  viewpoints better and navigate toward mutually beneficial
-                  solutions. By bettering my compromising abilities, I aim to
-                  become more adept at reaching agreements that respect
-                  everyone's interests, thereby improving the outcomes of
-                  conflict situations.
-                </p>
+                  <p>
+                    Similarly, the Collaborating style resonates with my belief
+                    in finding win-win solutions. As an "Owl," I strive to
+                    identify mutual goals and work towards resolutions that
+                    satisfy everyone involved. This approach has enabled me to
+                    resolve complex problems while strengthening relationships,
+                    building trust, and encouraging open communication.
+                  </p>
+                  <p>
+                    Despite my comfort with accommodation and collaboration, I
+                    recognize the importance of balance and flexibility in
+                    conflict management. Therefore, I am actively working on
+                    enhancing my Compromising skills. This style, characterized
+                    by the "Fox," represents a middle ground between meeting my
+                    own goals and attending to the relationships involved.
+                  </p>
+                  <p>
+                    Improving in this area means embracing active listening and
+                    clear communication, allowing me to understand opposing
+                    viewpoints better and navigate toward mutually beneficial
+                    solutions. By bettering my compromising abilities, I aim to
+                    become more adept at reaching agreements that respect
+                    everyone's interests, thereby improving the outcomes of
+                    conflict situations.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
+          <div className="leading-loose prose prose-indigo mx-auto mt-5 text-gray-500 lg:max-w-none">
+            <p className="mt-32 font-bold text-3xl text-gray-800">
+              A Time When Demonstrated Accommodating and Collaborating Conflict
+              Management (Owl and Teddy Bear)
+            </p>
+            <div className="text-xl leading-relaxed text-gray-500">
+              <p>
+                While working on a presentation for my Object Oriented Software
+                Engineering course, I was able to apply my Accommodating and
+                Collaborative conflict management skills effectively. The
+                project required collaboration with a diverse team, each member
+                having unique ideas and perspectives. Early on, we faced
+                disagreements regarding the project's direction and the
+                implementation of certain features.
+              </p>
+              <p>
+                In this situation, my Accommodating style came into play as I
+                wanted to listen to my team’s concerns and suggestions before I
+                shared my take on the situation. During a heated argument
+                between my group and TA, I took steps to acknowledge the
+                validity of each team member's input, which helped to
+                de-escalate the situation and help our team return to a positive
+                atmosphere that ensured that everyone felt valued and heard.
+              </p>
+              <p>
+                However, I knew that merely accommodating wouldn't be enough to
+                complete our project successfully. This is where my
+                Collaborating style began to come in. I was able to facilitated
+                a series of discussions aimed at identifying our common goals
+                and the essential features for our project. By encouraging open
+                dialogue and leveraging the strengths of each team member, we
+                were able to develop a unified vision for our project. In the
+                end, we were able to successfully reach a middle ground in our
+                implementation strategy and created a well rounded presentation
+                that helped us score a calm 15/15 for our Product Pitch
+                Presentation.
+              </p>
+              <p>
+                Reflecting on this experience, I learned the importance of
+                adapting my conflict management style to the situation at hand.
+                While my natural tendency is to accommodate and collaborate, I
+                saw firsthand the value of compromising and maintaining
+                flexibility. I've learned that while maintaining harmony is
+                important, it's equally crucial to address and resolve conflicts
+                constructively to achieve shared goals.
+              </p>
+            </div>
+            <p className="mt-36 text-xl font-semibold leading-7 text-indigo-600">
+              Important Details and Take-aways
+            </p>
+            <h1 className="text-3xl font-bold text-gray-900 sm:text-4xl">
+              Conclusion of Assessments
+            </h1>
+            <p className="mt-6 text-xl leading-loose text-gray-500">
+              In applying these insights to my daily interactions and leadership
+              roles, I continuously strive to assess the context of each
+              conflict and choose the most appropriate management style. My goal
+              is to not only resolve disputes effectively but also to learn from
+              each experience, enhancing my ability to lead, collaborate, and
+              build lasting relationships.
+            </p>
+            <p className="mt-6 text-xl leading-loose text-gray-500">
+              This analysis is not just a testament to my current capabilities
+              but also a commitment to ongoing growth and development. I believe
+              that understanding and adapting one's conflict management style is
+              crucial for effective leadership and personal growth. By sharing
+              this journey, I hope to inspire others to reflect on their
+              conflict resolution strategies and promote a more empathetic and
+              understanding approach to disagreements.
+            </p>
+          </div>
         </div>
       </div>
-      <div className="pt-28 mx-auto max-w-3xl text-base leading-7 text-gray-700">
-        <p className="text-xl font-semibold leading-7 text-indigo-600">
-          Important Details and Take-aways
-        </p>
-        <h1 className="pt-4 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-          Conclusion of Assessments
-        </h1>
-        <p className="mt-6 text-xl leading-8">
-          In applying these insights to my daily interactions and leadership
-          roles, I continuously strive to assess the context of each conflict
-          and choose the most appropriate management style. My goal is to not
-          only resolve disputes effectively but also to learn from each
-          experience, enhancing my ability to lead, collaborate, and build
-          lasting relationships.
-        </p>
-        <p className="mt-6 text-xl leading-8">
-          This analysis is not just a testament to my current capabilities but
-          also a commitment to ongoing growth and development. I believe that
-          understanding and adapting one's conflict management style is crucial
-          for effective leadership and personal growth. By sharing this journey,
-          I hope to inspire others to reflect on their conflict resolution
-          strategies and promote a more empathetic and understanding approach to
-          disagreements.
-        </p>
-        <div />
-      </div>
+
+      <div />
     </div>
   );
 };

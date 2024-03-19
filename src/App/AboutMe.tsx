@@ -35,7 +35,7 @@ const AboutMe = () => {
   return (
     <div>
       <NavBar />
-      
+
       <div className="bg-white">
         <div className="isolate">
           <div className="relative isolate -z-10 overflow-hidden bg-gradient-to-b from-indigo-100/20 pt-14">
@@ -69,12 +69,12 @@ const AboutMe = () => {
                     improve quality of life on a global scale.
                   </p>
                 </div>
-                {/* Ensure the image div is outside and next to the text div in the grid */}
-                <div className="col-start-9 col-span-5 ">
+
+                <div className="col-start-9 col-span-5 rounded-2xl ">
                   <img
-                    src="https://images.unsplash.com/photo-1567532900872-f4e906cbf06a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1280&q=80"
-                    alt="Descriptive Alt Text"
-                    className="mt-2 aspect-[6/5] w-96 rounded-2xl object-cover sm:mt-16 lg:mt-0 lg:max-w-none xl:row-span-2 xl:row-end-2 xl:mt-36"
+                    src={"IMG5912.jpeg"}
+                    alt=""
+                    className="mt-2 aspect-[6/6] w-96 rounded-4xl object-cover sm:mt-16 lg:mt-0 lg:max-w-none xl:row-span-2 xl:row-end-2 xl:mt-36"
                   />
                 </div>
               </div>
@@ -112,10 +112,9 @@ const AboutMe = () => {
                     discovered the pool. In the beginning, I saw the open pool
                     as a cold and vast ocean of repetitive pain and agony.
                     However, I realized these thoughts would only occupy my mind{" "}
-                    <strong>before</strong> I had learned to conquer cold water
-                    by forgetting it even existed, from then on, I would change
-                    my clothes, grab my goggles, and{" "}
-                    <strong>just send it </strong> every time. Before I knew it,
+                    beforeI had learned to conquer cold water by forgetting it
+                    even existed, from then on, I would change my clothes, grab
+                    my goggles, and just send it every time. Before I knew it,
                     my inevitable journey in life as a swimmer would unfold
                     before me. the beginning of my journey as a swimmer in a
                     moderately-sized pool in Brea California. However, later
@@ -174,34 +173,34 @@ const AboutMe = () => {
                 <div className="flex flex-wrap items-start justify-end gap-6 sm:gap-8 lg:contents">
                   <div className="w-0 flex-auto lg:ml-auto lg:w-auto lg:flex-none lg:self-end">
                     <img
-                      src="https://images.unsplash.com/photo-1568992687947-868a62a9f521?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1152&h=842&q=80"
+                      src={"IMG5918.jpg"}
                       alt=""
                       className="aspect-[7/5] w-[37rem] max-w-none rounded-2xl bg-gray-50 object-cover"
                     />
                     <img
-                      src="https://images.unsplash.com/photo-1670272502246-768d249768ca?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1152&q=80"
+                      src={"IMG0365.jpg"}
                       alt=""
-                      className="mt-12 aspect-[7/5] w-[37rem] max-w-none rounded-2xl bg-gray-50 object-cover"
+                      className="mt-12 aspect-[5/6] w-[37rem] max-w-none rounded-2xl bg-gray-50 object-cover"
                     />
                   </div>
                   <div className="contents lg:col-span-2 lg:col-end-2 lg:ml-auto lg:flex lg:w-[37rem] lg:items-start lg:justify-end lg:gap-x-8">
                     <div className="order-first flex w-64 flex-none justify-end self-end lg:w-auto">
                       <img
-                        src="https://images.unsplash.com/photo-1605656816944-971cd5c1407f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=768&h=604&q=80"
+                        src={"79903.jpg"}
                         alt=""
                         className="aspect-[4/3] w-[24rem] max-w-none flex-none rounded-2xl bg-gray-50 object-cover"
                       />
                     </div>
                     <div className="flex w-96 flex-auto justify-end lg:w-auto lg:flex-none">
                       <img
-                        src="https://images.unsplash.com/photo-1568992687947-868a62a9f521?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1152&h=842&q=80"
+                        src={"200952.jpg"}
                         alt=""
                         className="aspect-[7/5] w-[37rem] max-w-none flex-none rounded-2xl bg-gray-50 object-cover"
                       />
                     </div>
                     <div className="hidden sm:block sm:w-0 sm:flex-auto lg:w-auto lg:flex-none">
                       <img
-                        src="https://images.unsplash.com/photo-1612872087720-bb876e2e67d1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=768&h=604&q=80"
+                        src={"52010_.jpg"}
                         alt=""
                         className="aspect-[4/3] w-[24rem] max-w-none rounded-2xl bg-gray-50 object-cover"
                       />
@@ -274,27 +273,27 @@ const AboutMe = () => {
               </div>
               <div className="mt-6 max-w-xl lg:mt-0 xl:col-end-1 xl:row-start-1"></div>
               <img
-                src="https://images.unsplash.com/photo-1567532900872-f4e906cbf06a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1280&q=80"
+                src=""
                 alt=""
                 className="mt-2 aspect-[6/5] w-full max-w-lg rounded-2xl object-cover sm:mt-16 lg:mt-0 lg:max-w-none xl:row-span-2 xl:row-end-2 xl:mt-36"
               />
             </div>
           </div>
 
-          <div className="mx-auto max-w-7xl px-6 py-32 sm:py-40 lg:px-8">
+          <div className="mx-auto max-w-7xl py-32 sm:py-40">
             <div className="mx-auto max-w-2xl lg:mx-0 lg:grid lg:max-w-none lg:grid-cols-2 lg:gap-x-16 lg:gap-y-6 xl:grid-cols-1 xl:grid-rows-1 xl:gap-x-8">
               <div>
                 <h1 className="mt-2 max-w-2xl text-2xl font-bold tracking-tight text-gray-900 sm:text-6xl lg:col-span-2 xl:col-auto">
-                  Purpose and Vision
+                  Purpose and Mission
                 </h1>
-                <p className="mt-6 text-xl leading-loose text-gray-600">
+                <p className="mt-6 text-2xl leading-loose text-gray-600">
                   In the future, I envision myself leading my biotechnology
                   company and lab with a commitment to innovation, accessible
                   healthcare, and social well-being. At the intersection of
                   public health and computer science, I aspire to drive
                   transformative initiatives that redefine healthcare.
                 </p>
-                <p className="mt-4 text-xl leading-loose text-gray-600">
+                <p className="mt-4 text-2xl leading-loose text-gray-600">
                   By leveraging my experience and expertise in technology and
                   biological sciences, I aim to pioneer solutions that will
                   address pressing global challenges by way of research and
@@ -309,22 +308,16 @@ const AboutMe = () => {
                 </p>
               </div>
               <div className="mt-6 max-w-xl lg:mt-0 xl:col-end-1 xl:row-start-1"></div>
-              <img
-                src="https://images.unsplash.com/photo-1567532900872-f4e906cbf06a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1280&q=80"
-                alt=""
-                className="mt-2 aspect-[6/5] w-full max-w-lg rounded-2xl object-cover sm:mt-16 lg:mt-0 lg:max-w-none xl:row-span-2 xl:row-end-2 xl:mt-36"
-              />
             </div>
           </div>
 
-          {/* Content section */}
           <div className="mx-auto max-w-7xl px-6 sm:mt-40 lg:px-8">
             <div className="mx-auto flex max-w-2xl flex-col items-end justify-between gap-16 lg:mx-0 lg:max-w-none lg:flex-row">
               <div className="w-full lg:max-w-lg lg:flex-auto">
                 <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
                   My Life at Hopkins:
                 </h2>
-                <p className="mt-6 text-xl leading-8 text-gray-600">
+                <p className="text-2xl mt-6 leading-loose text-gray-500">
                   At Johns Hopkins, I have embraced opportunities to expand my
                   knowledge and skills beyond the classroom. Participating in
                   hackathons and interdisciplinary workshops, I have
@@ -336,13 +329,19 @@ const AboutMe = () => {
                   transformative power of collaborative innovation.
                 </p>
                 <img
-                  src="https://images.unsplash.com/photo-1606857521015-7f9fcf423740?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1344&h=1104&q=80"
+                  src={"IMG073.jpg"}
                   alt=""
                   className="mt-16 aspect-[6/5] w-full rounded-2xl bg-gray-50 object-cover lg:aspect-auto lg:h-[34.5rem]"
                 />
               </div>
+
               <div className="w-full lg:max-w-xl lg:flex-auto">
-                <p className="-my-8 divide-y divide-gray-100">
+                <img
+                  src={"IMG073.jpg"}
+                  alt=""
+                  className="mb-14 mt-16 aspect-[6/5] w-full rounded-2xl bg-gray-50 object-cover lg:aspect-auto lg:h-[34.5rem]"
+                />
+                <p className="text-2xl -my-8 divide-y leading-loose text-gray-500">
                   <p>
                     Some on-campus organizations that I actively engage in
                     include HopHacks, HopAI, HopStart, Prometheus Undergraduate
