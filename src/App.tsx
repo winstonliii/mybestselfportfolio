@@ -13,74 +13,75 @@ import Footer from "./components/Footer";
 function App() {
   return (
     <div>
-      <Router>
-        <div>
-          <NavBar />
+      <Router basename="/mybestselfportfolio">
+        <NavBar />
 
-          <Routes>
-            <Route
-              path="/mybestselfportfolio/home"
-              element={
-                <>
-                  <Landing />
-                  <Home />
-                </>
-              }
-            />
-            <Route
-              path="/mybestselfportfolio/about-me"
-              element={
-                <>
-                  {" "}
-                  <AboutMe /> <Footer />{" "}
-                </>
-              }
-            />
-            <Route
-              path="/mybestselfportfolio/interviews"
-              element={
-                <>
-                  {" "}
-                  <Interviews /> <Footer />{" "}
-                </>
-              }
-            />
-            <Route
-              path="/mybestselfportfolio/assessments"
-              element={
-                <>
-                  <Assessments /> <Footer />{" "}
-                </>
-              }
-            />
-            <Route
-              path="/mybestselfportfolio/reflections"
-              element={
-                <>
-                  <Reflections /> <Footer />{" "}
-                </>
-              }
-            />
-            <Route
-              path="/mybestselfportfolio/growth"
-              element={
-                <>
-                  <Growth />
-                  <Footer />
-                </>
-              }
-            />
-            <Route
-              path="/mybestselfportfolio"
-              element={
-                <>
-                  <Landing />
-                  <Home />
-                </>
-              }
-            />
-          </Routes>
-        </div>
+        <Routes>
+          <Route
+            path="/home"
+            element={
+              <>
+                <Landing />
+                <Home />
+              </>
+            }
+          />
+          <Route
+            path="/about-me"
+            element={
+              <>
+                <AboutMe />
+                <Footer />
+              </>
+            }
+          />
+          <Route
+            path="/interviews"
+            element={
+              <>
+                <Interviews />
+                <Footer />
+              </>
+            }
+          />
+          <Route
+            path="/assessments"
+            element={
+              <>
+                <Assessments />
+                <Footer />
+              </>
+            }
+          />
+          <Route
+            path="/reflections"
+            element={
+              <>
+                <Reflections />
+                <Footer />
+              </>
+            }
+          />
+          <Route
+            path="/growth"
+            element={
+              <>
+                <Growth />
+                <Footer />
+              </>
+            }
+          />
+
+          <Route
+            path="/"
+            element={
+              <>
+                <Landing />
+                <Home />
+              </>
+            }
+          />
+        </Routes>
       </Router>
     </div>
   );
