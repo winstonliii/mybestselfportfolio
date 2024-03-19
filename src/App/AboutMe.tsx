@@ -336,11 +336,7 @@ const AboutMe = () => {
               </div>
 
               <div className="w-full lg:max-w-xl lg:flex-auto">
-                <img
-                  src={"IMG073.jpg"}
-                  alt=""
-                  className="mb-14 mt-16 aspect-[6/5] w-full rounded-2xl bg-gray-50 object-cover lg:aspect-auto lg:h-[34.5rem]"
-                />
+                
                 <p className="text-2xl -my-8 divide-y leading-loose text-gray-500">
                   <p>
                     Some on-campus organizations that I actively engage in
