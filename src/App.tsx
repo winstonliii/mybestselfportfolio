@@ -13,7 +13,7 @@ import Footer from "./components/Footer";
 function App() {
   return (
     <div>
-      <Router basename="/mybestselfportfolio">
+      <Router> {/* Removed basename="/mybestselfportfolio" */}
         <NavBar />
 
         <Routes>
@@ -71,9 +71,8 @@ function App() {
               </>
             }
           />
-
           <Route
-            path="/"
+            path="/" // This is the default route
             element={
               <>
                 <Landing />
