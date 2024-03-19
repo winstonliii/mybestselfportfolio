@@ -315,7 +315,7 @@ const AboutMe = () => {
             <div className="mx-auto flex max-w-2xl flex-col items-end justify-between gap-16 lg:mx-0 lg:max-w-none lg:flex-row">
               <div className="w-full lg:max-w-lg lg:flex-auto">
                 <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-                  My Life at Hopkins:
+                  My Life at Hopkins
                 </h2>
                 <p className="text-2xl mt-6 leading-loose text-gray-500">
                   At Johns Hopkins, I have embraced opportunities to expand my
