@@ -1,19 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Best Self Portfolio</title>
-    <script>
-      // Check if the URL hash is empty
-      if (window.location.pathname !== "/mybestselfportfolio/") {
-        // Redirect to the homepage, preserving the path as a hash
-        window.location.href = '/mybestselfportfolio/#' + window.location.pathname.slice("/mybestselfportfolio".length) + window.location.search;
-      }
-    </script>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Best Self Portfolio</title>
+  <script>
+    // Immediately redirect to the homepage with the path preserved in the hash
+    // This allows your SPA's router to read the path from the hash and navigate to the correct route
+    window.location.replace('/mybestselfportfolio/#' + location.pathname.slice('/mybestselfportfolio'.length));
+  </script>
+</head>
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.tsx"></script>
+</body>
 </html>
