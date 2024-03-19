@@ -5,11 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Best Self Portfolio</title>
     <script>
-      // Save the full URL in a variable
-      const fullURL = window.location.href;
-    
-      // Construct the correct URL using the hash
-      window.location.replace('/mybestselfportfolio/#' + fullURL.split('/mybestselfportfolio/')[1]);
+      // This will capture any URL segments after '/mybestselfportfolio/', including queries and hashes
+      const pathSegments = location.pathname.slice(
+        "/mybestselfportfolio".length,
+      );
+      if (pathSegments) {
+        // Redirect while preserving path, query, and hash
+        window.location.replace(
+          "/mybestselfportfolio/#" +
+            pathSegments +
+            location.search +
+            location.hash,
+        );
+      }
     </script>
   </head>
   <body>
