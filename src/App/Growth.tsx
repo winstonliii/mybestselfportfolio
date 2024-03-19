@@ -30,12 +30,11 @@ const Growth = () => {
           <figure className="mt-16">
             <img
               className="aspect-video rounded-xl bg-gray-50 object-cover"
-              src=""
+              src={"legodestroyerr.png"}
               alt=""
             />
-            <figcaption className="mt-4 flex gap-x-2 text-sm leading-6 text-gray-500">
-              Faucibus commodo massa rhoncus, volutpat.
-            </figcaption>
+
+            <figcaption className="mt-4 flex gap-x-2 text-sm leading-6 text-gray-500"></figcaption>
           </figure>
 
           <div className="mt-10 max-w-2xl">
@@ -54,6 +53,12 @@ const Growth = () => {
               empathy into my leadership to understand and address the diverse
               needs and emotions of my team members more effectively.
             </p>
+
+            <img
+              className="mt-10 aspect-video rounded-xl bg-gray-50 object-cover"
+              src={"IMG5904.jpg"}
+              alt=""
+            />
 
             <h2 className="mt-16 text-2xl font-bold tracking-tight text-gray-900">
               Immediate and Concrete Improvement Action
