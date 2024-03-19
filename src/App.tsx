@@ -13,7 +13,7 @@ import Footer from "./components/Footer";
 function App() {
   return (
     <div>
-      <Router>
+      <Router> 
         <NavBar />
 
         <Routes>
@@ -72,7 +72,7 @@ function App() {
             }
           />
           <Route
-            path="/#" // This is the default route
+            path="/" // This is the default route
             element={
               <>
                 <Landing />
