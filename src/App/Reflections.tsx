@@ -4,7 +4,8 @@ const Reflections = () => {
   return (
     <div>
       <NavBar />
-      <div className="mt-48 relative isolate overflow-hidden bg-white px-6 py-24 sm:py-32 lg:overflow-visible lg:px-0">
+
+      <div className="relative isolate overflow-hidden bg-white px-6 py-24 sm:py-32 lg:overflow-visible lg:px-0">
         <div className="absolute inset-0 -z-10 overflow-hidden"></div>
         <svg
           className="absolute left-[max(50%,25rem)] top-0 h-[64rem] w-[128rem] -translate-x-1/2 stroke-gray-200 [mask-image:radial-gradient(64rem_64rem_at_top,white,transparent)]"
@@ -270,7 +271,14 @@ const Reflections = () => {
         </div>
 
         <div className="mt-12 lg:col-start-4 lg:col-span-6 lg:row-start-7">
-          <p className="text-3xl font-bold leading-7 text-gray-900">
+          <div className="relative isolate overflow-hidden sm:mt-24 xl:mx-auto xl:max-w-8xl xl:px-">
+            <img
+              src={"IMG6093.jpg"}
+              alt=""
+              className="aspect-[7/3] w-full object-cover xl:rounded-3xl"
+            />
+          </div>
+          <p className="mt-24 text-3xl font-bold leading-7 text-gray-900">
             My Application of Situational Leadership
           </p>
           <div className="mt-6 text-lg leading-8 text-gray-500">
