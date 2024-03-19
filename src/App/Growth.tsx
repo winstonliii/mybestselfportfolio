@@ -55,12 +55,12 @@ const Growth = () => {
             </p>
 
             <img
-              className="mt-10 aspect-video rounded-xl bg-gray-50 object-cover"
+              className="mt-10 w-8/12 rounded-xl bg-gray-50 object-cover"
               src={"IMG5904.jpg"}
               alt=""
             />
 
-            <h2 className="mt-16 text-2xl font-bold tracking-tight text-gray-900">
+            <h2 className="mt-24 text-2xl font-bold tracking-tight text-gray-900">
               Immediate and Concrete Improvement Action
             </h2>
             <h2 className="text-lg tracking-tight text-gray-500">
@@ -83,7 +83,12 @@ const Growth = () => {
               resonates with each team member's unique perspective and needs.
             </p>
 
-            <h2 className="mt-16 text-2xl font-bold tracking-tight text-gray-900">
+            <img
+              className="mt-10 w-10/12 rounded-xl bg-gray-50 object-cover"
+              src={"chandleproduct.jpg"}
+              alt=""
+            />
+            <h2 className="mt-24 text-2xl font-bold tracking-tight text-gray-900">
               Impact on Current Team
             </h2>
             <h2 className="text-lg tracking-tight text-gray-500">
