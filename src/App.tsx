@@ -13,7 +13,7 @@ import Footer from "./components/Footer";
 function App() {
   return (
     <div>
-      <Router> {/* Removed basename="/mybestselfportfolio" */}
+      <Router> 
         <NavBar />
 
         <Routes>
