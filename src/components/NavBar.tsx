@@ -5,12 +5,12 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 const baseUrl = "/mybestselfportfolio";
 
 const navigation = [
-  { name: "Home", href: `${baseUrl}/#home` },
-  { name: "About Me", href: `${baseUrl}/#about-me` },
-  { name: "Interviews", href: `${baseUrl}/#interviews` },
-  { name: "Assessments", href: `${baseUrl}/#assessments` },
-  { name: "Reflections", href: `${baseUrl}/#reflections` },
-  { name: "Growth", href: `${baseUrl}/#growth` },
+  { name: "Home", href: `${baseUrl}/home` },
+  { name: "About Me", href: `${baseUrl}/about-me` },
+  { name: "Interviews", href: `${baseUrl}/interviews` },
+  { name: "Assessments", href: `${baseUrl}/assessments` },
+  { name: "Reflections", href: `${baseUrl}/reflections` },
+  { name: "Growth", href: `${baseUrl}/growth` },
 ];
 
 const NavBar = () => {

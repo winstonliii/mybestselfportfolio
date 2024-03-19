@@ -13,12 +13,12 @@ import Footer from "./components/Footer";
 function App() {
   return (
     <div>
-      <Router> 
+      <Router>
         <NavBar />
 
         <Routes>
           <Route
-            path="/home"
+            path="/#home"
             element={
               <>
                 <Landing />
@@ -27,7 +27,7 @@ function App() {
             }
           />
           <Route
-            path="/about-me"
+            path="/#about-me"
             element={
               <>
                 <AboutMe />
@@ -36,7 +36,7 @@ function App() {
             }
           />
           <Route
-            path="/interviews"
+            path="/#interviews"
             element={
               <>
                 <Interviews />
@@ -45,7 +45,7 @@ function App() {
             }
           />
           <Route
-            path="/assessments"
+            path="/#assessments"
             element={
               <>
                 <Assessments />
@@ -54,7 +54,7 @@ function App() {
             }
           />
           <Route
-            path="/reflections"
+            path="/#reflections"
             element={
               <>
                 <Reflections />
@@ -63,7 +63,7 @@ function App() {
             }
           />
           <Route
-            path="/growth"
+            path="/#growth"
             element={
               <>
                 <Growth />
@@ -72,7 +72,7 @@ function App() {
             }
           />
           <Route
-            path="/" // This is the default route
+            path="/#" // This is the default route
             element={
               <>
                 <Landing />
