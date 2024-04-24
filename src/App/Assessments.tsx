@@ -34,7 +34,7 @@ const Assessments = () => {
                     />
                     <img
                       className="rounded-lg object-cover object-center shadow-lg"
-                      src={"s235701.png"}
+                      src={"s235701second.png"}
                       alt=""
                     />
                   </div>

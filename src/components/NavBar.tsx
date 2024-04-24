@@ -11,6 +11,7 @@ const navigation = [
   { name: "Assessments", href: `${baseUrl}/#assessments` },
   { name: "Reflections", href: `${baseUrl}/#reflections` },
   { name: "Growth", href: `${baseUrl}/#growth` },
+  { name: "MyLeadershipTheory", href: `${baseUrl}/#myleadershiptheory` },
 ];
 
 const NavBar = () => {

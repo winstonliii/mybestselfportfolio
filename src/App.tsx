@@ -7,6 +7,7 @@ import Growth from "./App/Growth";
 import Interviews from "./App/Interviews";
 import Reflections from "./App/Reflections";
 import Landing from "./App/Landing";
+import MyLeadershipTheory from "./App/My Leadership Theory";
 import "./index.css";
 import Footer from "./components/Footer";
 
@@ -67,6 +68,15 @@ function App() {
             element={
               <>
                 <Growth />
+                <Footer />
+              </>
+            }
+          />
+          <Route
+            path="/myleadershiptheory"
+            element={
+              <>
+                <MyLeadershipTheory />
                 <Footer />
               </>
             }

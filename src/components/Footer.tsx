@@ -4,10 +4,10 @@ const navigation = {
   main: [
     { name: "About", href: "#" },
     { name: "Blog", href: "#" },
-    { name: "Jobs", href: "#" },
-    { name: "Press", href: "#" },
+    { name: "Information", href: "#" },
     { name: "Accessibility", href: "#" },
-    { name: "Partners", href: "#" },
+    { name: "References", href: "#" },
+    { name: "Support", href: "#" },
   ],
   social: [
     {
@@ -112,7 +112,7 @@ const Footer = () => {
             ))}
           </div>
           <p className="mt-10 text-center text-xs leading-5 text-gray-500">
-            &copy; 2020 Your Company, Inc. All rights reserved.
+            &copy; Created by Winston Li, 2024
           </p>
         </div>
       </div>
