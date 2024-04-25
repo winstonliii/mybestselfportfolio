@@ -1,6 +1,6 @@
-import React, { useEffect, useRef } from 'react';
-import * as THREE from 'three';
-import { BoxGeometry } from 'three';
+import React, { useEffect, useRef } from "react";
+import * as THREE from "three";
+import { BoxGeometry } from "three";
 
 const ThreeJsScene: React.FC = () => {
   const canvasRef = useRef<HTMLDivElement>(null);
@@ -26,13 +26,13 @@ const ThreeJsScene: React.FC = () => {
       camera.updateProjectionMatrix();
       renderer.setSize(window.innerWidth, window.innerHeight);
     };
-    window.addEventListener('resize', onWindowResize, false);
+    window.addEventListener("resize", onWindowResize, false);
 
     const camera = new THREE.PerspectiveCamera(
       20,
       window.innerWidth / window.innerHeight,
       1,
-      500
+      500,
     );
     camera.position.set(0, 2, 14);
 
@@ -45,6 +45,7 @@ const ThreeJsScene: React.FC = () => {
     const uSpeed = 0.001;
 
     const setcolor = 0xf02050;
+    
     scene.background = new THREE.Color(setcolor);
     scene.fog = new THREE.Fog(setcolor, 10, 16);
 
@@ -67,7 +68,14 @@ const ThreeJsScene: React.FC = () => {
     function init() {
       const segments = 2;
       for (let i = 1; i < 100; i++) {
-        const geometry = new THREE.BoxGeometry(1, 0, 0, segments, segments, segments);
+        const geometry = new THREE.BoxGeometry(
+          1,
+          0,
+          0,
+          segments,
+          segments,
+          segments,
+        );
         const material = new THREE.MeshStandardMaterial({
           color: setTintColor(),
           wireframe: false,
@@ -117,7 +125,7 @@ const ThreeJsScene: React.FC = () => {
         particular.position.set(
           mathRandom(aparticular),
           mathRandom(aparticular),
-          mathRandom(aparticular)
+          mathRandom(aparticular),
         );
         particular.rotation.set(mathRandom(), mathRandom(), mathRandom());
         smoke.add(particular);
@@ -166,9 +174,9 @@ const ThreeJsScene: React.FC = () => {
       }
     };
 
-    window.addEventListener('mousemove', onMouseMove, false);
-    window.addEventListener('touchstart', onDocumentTouchStart, false);
-    window.addEventListener('touchmove', onDocumentTouchMove, false);
+    window.addEventListener("mousemove", onMouseMove, false);
+    window.addEventListener("touchstart", onDocumentTouchStart, false);
+    window.addEventListener("touchmove", onDocumentTouchMove, false);
 
     const ambientLight = new THREE.AmbientLight(0xffffff, 4);
     const lightFront = new THREE.SpotLight(0xffffff, 20, 10);
@@ -193,80 +201,80 @@ const ThreeJsScene: React.FC = () => {
     scene.add(city);
     city.add(smoke);
     city.add(town);
-    
+
     const gridHelper = new THREE.GridHelper(60, 120, 0xff0000, 0x000000);
     city.add(gridHelper);
-    
+
     const createCars = function (cScale = 2, cPos = 20, cColor = 0xffff00) {
-     const cMat = new THREE.MeshToonMaterial({
-       color: cColor,
-       side: THREE.DoubleSide,
-     });
-     const cGeo = new THREE.BoxGeometry(1, cScale / 40, cScale / 40);
-     const cElem = new THREE.Mesh(cGeo, cMat);
-     const cAmp = 3;
-    
-     if (createCarPos) {
-       createCarPos = false;
-       cElem.position.x = -cPos;
-       cElem.position.z = mathRandom(cAmp);
-     } else {
-       createCarPos = true;
-       cElem.position.x = mathRandom(cAmp);
-       cElem.position.z = -cPos;
-       cElem.rotation.y = (90 * Math.PI) / 180;
-     }
-     cElem.receiveShadow = true;
-     cElem.castShadow = true;
-     cElem.position.y = Math.abs(mathRandom(5));
-     city.add(cElem);
+      const cMat = new THREE.MeshToonMaterial({
+        color: cColor,
+        side: THREE.DoubleSide,
+      });
+      const cGeo = new THREE.BoxGeometry(1, cScale / 40, cScale / 40);
+      const cElem = new THREE.Mesh(cGeo, cMat);
+      const cAmp = 3;
+
+      if (createCarPos) {
+        createCarPos = false;
+        cElem.position.x = -cPos;
+        cElem.position.z = mathRandom(cAmp);
+      } else {
+        createCarPos = true;
+        cElem.position.x = mathRandom(cAmp);
+        cElem.position.z = -cPos;
+        cElem.rotation.y = (90 * Math.PI) / 180;
+      }
+      cElem.receiveShadow = true;
+      cElem.castShadow = true;
+      cElem.position.y = Math.abs(mathRandom(5));
+      city.add(cElem);
     };
-    
+
     const generateLines = function () {
-     for (let i = 0; i < 60; i++) {
-       createCars(0.1, 20);
-     }
+      for (let i = 0; i < 60; i++) {
+        createCars(0.1, 20);
+      }
     };
-    
+
     const cameraSet = function () {
-     createCars(0.1, 20, 0xffffff);
+      createCars(0.1, 20, 0xffffff);
     };
-    
+
     const animate = function () {
-     const time = Date.now() * 0.00005;
-     requestAnimationFrame(animate);
-    
-     city.rotation.y -= (mouse.x * 8 - camera.rotation.y) * uSpeed;
-     city.rotation.x -= (-(mouse.y * 2) - camera.rotation.x) * uSpeed;
-     if (city.rotation.x < -0.05) city.rotation.x = -0.05;
-     else if (city.rotation.x > 1) city.rotation.x = 1;
-     const cityRotation = Math.sin(Date.now() / 5000) * 13;
-    
-     for (let i = 0, l = town.children.length; i < l; i++) {
-       const object = town.children[i];
-     }
-    
-     smoke.rotation.y += 0.01;
-     smoke.rotation.x += 0.01;
-    
-     camera.lookAt(city.position);
-     renderer.render(scene, camera);
+      const time = Date.now() * 0.00005;
+      requestAnimationFrame(animate);
+
+      city.rotation.y -= (mouse.x * 8 - camera.rotation.y) * uSpeed;
+      city.rotation.x -= (-(mouse.y * 2) - camera.rotation.x) * uSpeed;
+      if (city.rotation.x < -0.05) city.rotation.x = -0.05;
+      else if (city.rotation.x > 1) city.rotation.x = 1;
+      const cityRotation = Math.sin(Date.now() / 5000) * 13;
+
+      for (let i = 0, l = town.children.length; i < l; i++) {
+        const object = town.children[i];
+      }
+
+      smoke.rotation.y += 0.01;
+      smoke.rotation.x += 0.01;
+
+      camera.lookAt(city.position);
+      renderer.render(scene, camera);
     };
-    
+
     generateLines();
     init();
     animate();
     // ads
     return () => {
-     // Clean up event listeners and dispose of resources, if needed
-     window.removeEventListener('resize', onWindowResize);
-     window.removeEventListener('mousemove', onMouseMove);
-     window.removeEventListener('touchstart', onDocumentTouchStart);
-     window.removeEventListener('touchmove', onDocumentTouchMove);
+      // Clean up event listeners and dispose of resources, if needed
+      window.removeEventListener("resize", onWindowResize);
+      window.removeEventListener("mousemove", onMouseMove);
+      window.removeEventListener("touchstart", onDocumentTouchStart);
+      window.removeEventListener("touchmove", onDocumentTouchMove);
     };
-    }, []); // Empty dependency array to run the effect only once
-    
-    return <div ref={canvasRef} />;
-    };
-    
-    export default ThreeJsScene;
+  }, []); // Empty dependency array to run the effect only once
+
+  return <div ref={canvasRef} />;
+};
+
+export default ThreeJsScene;

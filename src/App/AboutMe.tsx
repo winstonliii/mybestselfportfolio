@@ -336,7 +336,6 @@ const AboutMe = () => {
               </div>
 
               <div className="w-full lg:max-w-xl lg:flex-auto">
-                
                 <p className="text-2xl -my-8 divide-y leading-loose text-gray-500">
                   <p>
                     Some on-campus organizations that I actively engage in

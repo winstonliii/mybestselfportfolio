@@ -1,5 +1,5 @@
-import React from 'react';
-import styles from './ThreeJsContainer.module.css';
+import React from "react";
+import styles from "./ThreeJsContainer.module.css";
 
 const ThreeJsContainer: React.FC = () => {
   return (
@@ -9,19 +9,14 @@ const ThreeJsContainer: React.FC = () => {
           <div className="col">
             <div className="col-md-6">
               <div className="row">
-                
-                <div className="col">
-                  {/* Add the button component here */}
-                </div>
+                <div className="col">{/* Add the button component here */}</div>
               </div>
             </div>
           </div>
         </div>
       </div>
       <div className={`${styles.footer} ${styles.disableSelection}`}>
-        <div className="row">
-          
-        </div>
+        <div className="row"></div>
       </div>
     </div>
   );
