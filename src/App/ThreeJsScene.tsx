@@ -2,11 +2,13 @@ import React, { useEffect, useRef } from "react";
 import * as THREE from "three";
 import { BoxGeometry } from "three";
 
+import { TweenMax, Power1, Expo } from "gsap";
+
 const ThreeJsScene: React.FC = () => {
   const canvasRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    // Three.js code
+    // Renderer
     const renderer = new THREE.WebGLRenderer({ antialias: true });
     renderer.setSize(window.innerWidth, window.innerHeight);
 
@@ -21,6 +23,7 @@ const ThreeJsScene: React.FC = () => {
       canvasRef.current.appendChild(renderer.domElement);
     }
 
+    // Handling window resize
     const onWindowResize = () => {
       camera.aspect = window.innerWidth / window.innerHeight;
       camera.updateProjectionMatrix();
@@ -28,6 +31,8 @@ const ThreeJsScene: React.FC = () => {
     };
     window.addEventListener("resize", onWindowResize, false);
 
+
+    // Camera
     const camera = new THREE.PerspectiveCamera(
       20,
       window.innerWidth / window.innerHeight,
@@ -36,6 +41,8 @@ const ThreeJsScene: React.FC = () => {
     );
     camera.position.set(0, 2, 14);
 
+
+    // Scene
     const scene = new THREE.Scene();
     const city = new THREE.Object3D();
     const smoke = new THREE.Object3D();
@@ -66,16 +73,8 @@ const ThreeJsScene: React.FC = () => {
     }
 
     function init() {
-      const segments = 2;
       for (let i = 1; i < 100; i++) {
-        const geometry = new THREE.BoxGeometry(
-          1,
-          0,
-          0,
-          segments,
-          segments,
-          segments,
-        );
+        const geometry = new THREE.BoxGeometry(1, Math.random(), 1);
         const material = new THREE.MeshStandardMaterial({
           color: setTintColor(),
           wireframe: false,
@@ -178,6 +177,7 @@ const ThreeJsScene: React.FC = () => {
     window.addEventListener("touchstart", onDocumentTouchStart, false);
     window.addEventListener("touchmove", onDocumentTouchMove, false);
 
+    // Ambient and spot lights
     const ambientLight = new THREE.AmbientLight(0xffffff, 4);
     const lightFront = new THREE.SpotLight(0xffffff, 20, 10);
     const lightBack = new THREE.PointLight(0xffffff, 0.5);
