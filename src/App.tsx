@@ -77,7 +77,7 @@ function App() {
             element={
               <>
                 <MyLeadershipTheory />
-                <Footer />
+              
               </>
             }
           />

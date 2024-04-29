@@ -1,8 +1,9 @@
 import React, { useEffect, useRef } from "react";
 import * as THREE from "three";
 import { BoxGeometry } from "three";
-
 import { TweenMax, Power1, Expo } from "gsap";
+import { FontLoader } from 'three/examples/jsm/loaders/FontLoader';
+import { TextGeometry } from 'three/examples/jsm/geometries/TextGeometry';
 
 const ThreeJsScene: React.FC = () => {
   const canvasRef = useRef<HTMLDivElement>(null);
@@ -271,6 +272,21 @@ const ThreeJsScene: React.FC = () => {
       window.removeEventListener("mousemove", onMouseMove);
       window.removeEventListener("touchstart", onDocumentTouchStart);
       window.removeEventListener("touchmove", onDocumentTouchMove);
+
+      // Clean up the scene and dispose of resources
+      scene.traverse(function (object) {
+        if (object instanceof THREE.Mesh) {
+          object.geometry.dispose();
+          if (object.material instanceof THREE.Material) {
+            object.material.dispose();
+          }
+        }
+      });
+
+      renderer.dispose(); // Dispose of the renderer
+      canvasRef.current.removeChild(renderer.domElement);
+
+
     };
   }, []); // Empty dependency array to run the effect only once
 
