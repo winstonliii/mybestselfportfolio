@@ -2,8 +2,9 @@ import React, { useEffect, useRef } from "react";
 import * as THREE from "three";
 import { BoxGeometry } from "three";
 import { TweenMax, Power1, Expo } from "gsap";
-import { FontLoader } from 'three/examples/jsm/loaders/FontLoader';
-import { TextGeometry } from 'three/examples/jsm/geometries/TextGeometry';
+import { FontLoader } from "three/examples/jsm/loaders/FontLoader";
+import { TextGeometry } from "three/examples/jsm/geometries/TextGeometry";
+import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 
 const ThreeJsScene: React.FC = () => {
   const canvasRef = useRef<HTMLDivElement>(null);
@@ -62,19 +63,65 @@ const ThreeJsScene: React.FC = () => {
       return numValue;
     }
 
-    let setTintNum = true;
     function setTintColor() {
-      if (setTintNum) {
-        setTintNum = false;
-        return 0x000000;
-      } else {
-        setTintNum = true;
-        return 0x000000;
-      }
+      return 0x000000;
+    }
+
+    const list1 = [
+      "Resilience", "Compassion", "Integrity", "Courage", "Empathy", 
+      "Visionary", "Adaptability", "Humility", "Confidence", "Optimism", 
+      "Perseverance", "Decisiveness", "Initiative", "Innovation", "Empowerment", 
+      "Accountability", "Collaboration", "Inspiration", "Authenticity", "Wisdom", 
+      "Fairness", "Trustworthiness", "Determination", "Assertiveness", "Humor", 
+      "Calmness", "Patience", "Open-mindedness", "Strategic", "Self-awareness", 
+      "Empowering", "Creativity", "Curiosity", "Influence", "Charisma", 
+      "Independence", "Gratitude", "Generosity", "Sensitivity", "Tolerance", 
+      "Responsibility", "Caring", "Respect", "Kindness", "Generosity", 
+      "Self-discipline", "Ambition", "Resourcefulness", "Inclusivity", "Tenacity", 
+      "Dedication", "Adventurous", "Inspiring", "Persuasive", "Mentorship", 
+      "Inspirational", "Empathetic", "Innovative", "Pioneering", "Strategic", 
+      "Collaborative", "Motivational", "Forward-thinking", "Diplomatic", 
+      "Sociable", "Inspirational", "Tough-minded", "Champion", "Perceptive", 
+      "Problem-solver", "Team-player", "Goal-oriented"
+    ];
+
+    const list2 = [
+      "MC", "Nathan", "Xian", "Sophia", "William", 
+      "Weiguo", "Wellesley", "Sean", "Matteo", "Chris", 
+      "Florian", "Mia", "Jacob", "Charlotte", "Ethan", 
+      "Jenna", "Daniel", "Harper", "Matthew", "Evelyn", 
+      "Joseph", "Abigail", "David", "Emily", "Samuel", 
+      "Elizabeth", "Logan", "Johnny", "Roger", "Youssef"
+    ];
+
+    function getRandomWordAndColor() {
+      const isList1 = Math.random() < 0.5;
+      const list = isList1 ? list1 : list2;
+      const color = isList1 ? { r: 255, g: 255, b: 255, a: 1.0 } : { r: 0, g: 0, b: 255, a: 1.0 };
+      const word = list[Math.floor(Math.random() * list.length)];
+      return { word, color };
+    }
+
+    function makeTextSprite(message, parameters) {
+      const { fontsize, textColor } = parameters;
+      const canvas = document.createElement('canvas');
+      const context = canvas.getContext('2d');
+      context.font = `${fontsize}px Arial`;
+      context.fillStyle = `rgba(${textColor.r}, ${textColor.g}, ${textColor.b}, ${textColor.a})`;
+      context.fillText(message, 0, fontsize);
+
+      const texture = new THREE.Texture(canvas);
+      texture.needsUpdate = true;
+      const spriteMaterial = new THREE.SpriteMaterial({ map: texture });
+      const sprite = new THREE.Sprite(spriteMaterial);
+      sprite.scale.set(0.5 * fontsize, 0.25 * fontsize, 0.75 * fontsize);
+      return sprite;
     }
 
     function init() {
+      let textSpriteCount = 0;
       for (let i = 1; i < 100; i++) {
+        const boxHeight = Math.random() * 0.5 + 0.1;
         const geometry = new THREE.BoxGeometry(1, Math.random(), 1);
         const material = new THREE.MeshStandardMaterial({
           color: setTintColor(),
@@ -90,27 +137,39 @@ const ThreeJsScene: React.FC = () => {
         });
 
         const cube = new THREE.Mesh(geometry, material);
+        cube.castShadow = true;
+        cube.receiveShadow = true;
+        cube.scale.y = 0.1 + Math.abs(mathRandom(8));
+        cube.position.x = Math.round(mathRandom());
+        cube.position.z = Math.round(mathRandom());
+        cube.position.y = boxHeight / 2;
+        town.add(cube);
+
         // const wire = new THREE.Mesh(geometry, wmaterial);
         const floor = new THREE.Mesh(geometry, material);
         const wfloor = new THREE.Mesh(geometry, wmaterial);
 
         cube.add(wfloor);
-        cube.castShadow = true;
-        cube.receiveShadow = true;
+        if (textSpriteCount < 50) {
+          const { word, color } = getRandomWordAndColor();
+          const sprite = makeTextSprite(word, { fontsize: 10, textColor: color });
+          sprite.position.set(cube.position.x, cube.position.y + 1, cube.position.z);
+          town.add(sprite);
+          textSpriteCount++;
+        }
+        
+
         // cube.rotationValue = 0.1 + Math.abs(mathRandom(8));
 
         floor.scale.y = 0.05;
-        cube.scale.y = 0.1 + Math.abs(mathRandom(8));
-
+        
         const cubeWidth = 0.9;
         cube.scale.x = cube.scale.z = cubeWidth + mathRandom(1 - cubeWidth);
-        cube.position.x = Math.round(mathRandom());
-        cube.position.z = Math.round(mathRandom());
 
         floor.position.set(cube.position.x, 0, cube.position.z);
 
         town.add(floor);
-        town.add(cube);
+        
       }
 
       const gmaterial = new THREE.MeshToonMaterial({
