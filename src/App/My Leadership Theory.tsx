@@ -8,8 +8,6 @@ const MyLeadershipTheory = () => {
       <NavBar />
       <ThreeJsContainer />
       <ThreeJsScene />
-
-      
     </div>
   );
 };

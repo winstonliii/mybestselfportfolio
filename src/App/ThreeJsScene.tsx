@@ -35,7 +35,7 @@ const ThreeJsScene: React.FC = () => {
 
     // Camera
     const camera = new THREE.PerspectiveCamera(
-      20,
+      40,
       window.innerWidth / window.innerHeight,
       1,
       500,
