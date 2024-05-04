@@ -88,16 +88,16 @@ const ThreeJsScene: React.FC = () => {
     const list2 = [
       "MC", "Nathan", "Xian", "Sophia", "William", 
       "Weiguo", "Wellesley", "Sean", "Matteo", "Chris", 
-      "Florian", "Mia", "Jacob", "Charlotte", "Ethan", 
-      "Jenna", "Daniel", "Harper", "Matthew", "Evelyn", 
-      "Joseph", "Abigail", "David", "Emily", "Samuel", 
+      "Florian", "Mia", "Charlotte", "Ethan", 
+      "Jenna", "Daniel", "Matthew",  
+       "David", "Emily", "Olivia",
       "Elizabeth", "Logan", "Johnny", "Roger", "Youssef"
     ];
 
     function getRandomWordAndColor() {
       const isList1 = Math.random() < 0.5;
       const list = isList1 ? list1 : list2;
-      const color = isList1 ? { r: 255, g: 255, b: 255, a: 1.0 } : { r: 0, g: 0, b: 255, a: 1.0 };
+      const color = isList1 ? { r: 255, g: 255, b: 255, a: 1.0 } : { r: 255, g: 255, b: 0, a: 1.0 };
       const word = list[Math.floor(Math.random() * list.length)];
       return { word, color };
     }
