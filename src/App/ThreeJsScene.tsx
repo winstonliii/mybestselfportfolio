@@ -1,10 +1,5 @@
 import React, { useEffect, useRef } from "react";
 import * as THREE from "three";
-import { BoxGeometry } from "three";
-import { TweenMax, Power1, Expo } from "gsap";
-import { FontLoader } from "three/examples/jsm/loaders/FontLoader";
-import { TextGeometry } from "three/examples/jsm/geometries/TextGeometry";
-import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 
 const ThreeJsScene: React.FC = () => {
   const canvasRef = useRef<HTMLDivElement>(null);
@@ -207,9 +202,9 @@ const ThreeJsScene: React.FC = () => {
       city.add(pelement);
     }
 
-    const raycaster = new THREE.Raycaster();
+    // const raycaster = new THREE.Raycaster();
     const mouse = new THREE.Vector2();
-    let intersected: THREE.Object3D | null = null;
+    // let intersected: THREE.Object3D | null = null;
 
     const onMouseMove = (event: MouseEvent) => {
       event.preventDefault();
@@ -242,7 +237,7 @@ const ThreeJsScene: React.FC = () => {
     const lightFront = new THREE.SpotLight(0xffffff, 20, 10);
     const lightBack = new THREE.PointLight(0xffffff, 0.5);
 
-    const spotLightHelper = new THREE.SpotLightHelper(lightFront);
+    // const spotLightHelper = new THREE.SpotLightHelper(lightFront);
 
     lightFront.rotation.x = (45 * Math.PI) / 180;
     lightFront.rotation.z = (-45 * Math.PI) / 180;
@@ -296,23 +291,23 @@ const ThreeJsScene: React.FC = () => {
       }
     };
 
-    const cameraSet = function () {
-      createCars(0.1, 20, 0xffffff);
-    };
+    // const cameraSet = function () {
+    //   createCars(0.1, 20, 0xffffff);
+    // };
 
     const animate = function () {
-      const time = Date.now() * 0.00005;
+      // const time = Date.now() * 0.00005;
       requestAnimationFrame(animate);
 
       city.rotation.y -= (mouse.x * 8 - camera.rotation.y) * uSpeed;
       city.rotation.x -= (-(mouse.y * 2) - camera.rotation.x) * uSpeed;
       if (city.rotation.x < -0.05) city.rotation.x = -0.05;
       else if (city.rotation.x > 1) city.rotation.x = 1;
-      const cityRotation = Math.sin(Date.now() / 5000) * 13;
+      // const cityRotation = Math.sin(Date.now() / 5000) * 13;
 
-      for (let i = 0, l = town.children.length; i < l; i++) {
-        const object = town.children[i];
-      }
+      // for (let i = 0, l = town.children.length; i < l; i++) {
+      //   const object = town.children[i];
+      // }
 
       smoke.rotation.y += 0.01;
       smoke.rotation.x += 0.01;
