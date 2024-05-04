@@ -1,10 +1,23 @@
 import React, { useEffect, useRef } from "react";
 import * as THREE from "three";
 
+
+interface TextSpriteParameters {
+  fontsize: number;
+  textColor: {
+    r: number;
+    g: number;
+    b: number;
+    a: number;
+  };
+}
+
 const ThreeJsScene: React.FC = () => {
   const canvasRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    if (!canvasRef.current) return;
+
     // Renderer
     const renderer = new THREE.WebGLRenderer({ antialias: true });
     renderer.setSize(window.innerWidth, window.innerHeight);
@@ -97,19 +110,20 @@ const ThreeJsScene: React.FC = () => {
       return { word, color };
     }
 
-    function makeTextSprite(message, parameters) {
-      const { fontsize, textColor } = parameters;
+    function makeTextSprite(message: string, parameters: TextSpriteParameters): THREE.Sprite | null {
       const canvas = document.createElement('canvas');
-      const context = canvas.getContext('2d');
-      context.font = `${fontsize}px Arial`;
-      context.fillStyle = `rgba(${textColor.r}, ${textColor.g}, ${textColor.b}, ${textColor.a})`;
-      context.fillText(message, 0, fontsize);
+   const context = canvas.getContext('2d');
+    if (!context) return null; 
+
+      context.font = `${parameters.fontsize}px Arial`;
+      context.fillStyle = `rgba(${parameters.textColor.r}, ${parameters.textColor.g}, ${parameters.textColor.b}, ${parameters.textColor.a})`;
+      context.fillText(message, 0, parameters.fontsize);
 
       const texture = new THREE.Texture(canvas);
       texture.needsUpdate = true;
       const spriteMaterial = new THREE.SpriteMaterial({ map: texture });
       const sprite = new THREE.Sprite(spriteMaterial);
-      sprite.scale.set(0.5 * fontsize, 0.25 * fontsize, 0.75 * fontsize);
+      sprite.scale.set(0.5 * parameters.fontsize, 0.25 * parameters.fontsize, 0.75 * parameters.fontsize);
       return sprite;
     }
 
@@ -148,9 +162,11 @@ const ThreeJsScene: React.FC = () => {
         if (textSpriteCount < 50) {
           const { word, color } = getRandomWordAndColor();
           const sprite = makeTextSprite(word, { fontsize: 10, textColor: color });
-          sprite.position.set(cube.position.x, cube.position.y + 1, cube.position.z);
-          town.add(sprite);
-          textSpriteCount++;
+          if (sprite) { // Check if sprite is not null
+            sprite.position.set(cube.position.x, cube.position.y + 1, cube.position.z);
+            town.add(sprite);
+            textSpriteCount++;
+          }
         }
         
 
@@ -321,7 +337,6 @@ const ThreeJsScene: React.FC = () => {
     animate();
     // ads
     return () => {
-      // Clean up event listeners and dispose of resources, if needed
       window.removeEventListener("resize", onWindowResize);
       window.removeEventListener("mousemove", onMouseMove);
       window.removeEventListener("touchstart", onDocumentTouchStart);
@@ -330,21 +345,29 @@ const ThreeJsScene: React.FC = () => {
       // Clean up the scene and dispose of resources
       scene.traverse(function (object) {
         if (object instanceof THREE.Mesh) {
-          object.geometry.dispose();
+          if (object.geometry) {
+            object.geometry.dispose();
+          }
           if (object.material instanceof THREE.Material) {
-            object.material.dispose();
+            if (Array.isArray(object.material)) {
+              object.material.forEach(material => material.dispose());
+            } else {
+              object.material.dispose();
+            }
           }
         }
       });
 
-      renderer.dispose(); // Dispose of the renderer
-      canvasRef.current.removeChild(renderer.domElement);
-
-
+      if (renderer) {
+        renderer.dispose(); // Dispose of the renderer itself
+        if (canvasRef.current) {
+          canvasRef.current.removeChild(renderer.domElement); // Remove the renderer’s DOM element from the div
+        }
+      }
     };
-  }, []); // Empty dependency array to run the effect only once
-
-  return <div ref={canvasRef} />;
-};
+      }, []); // Dependency array
+    
+      return <div ref={canvasRef} />;
+  };
 
 export default ThreeJsScene;
