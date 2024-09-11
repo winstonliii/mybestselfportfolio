@@ -112,7 +112,7 @@ const AboutMe = () => {
                     discovered the pool. In the beginning, I saw the open pool
                     as a cold and vast ocean of repetitive pain and agony.
                     However, I realized these thoughts would only occupy my mind{" "}
-                    beforeI had learned to conquer cold water by forgetting it
+                    before had learned to conquer cold water by forgetting it
                     even existed, from then on, I would change my clothes, grab
                     my goggles, and just send it every time. Before I knew it,
                     my inevitable journey in life as a swimmer would unfold
