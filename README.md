@@ -4,8 +4,7 @@ The project is an introspective journey aimed at personal and leadership growth.
 
 
 ## How to run this website
-1. You can access this website through this link! --> 
-
+1. You can access this website through this link! --> [https://winstonliii.github.io/mybestselfportfolio/](https://winstonliii.github.io/mybestselfportfolio/)
 
 
 ## Running Locally
